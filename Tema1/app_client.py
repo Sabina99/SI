@@ -53,7 +53,7 @@ while message != 'stop':
         print('text criptat: ' + enc_text)
 
         to_rec_init_vec = client_socket.recv(1024).decode()
-        to_rec_init_vec = json.loads(to_rec_init_vec)  # string list to list
+        to_rec_init_vec = json.loads(to_rec_init_vec) 
 
         #  se decripteaza cheia
         aux = OFB(enc_text, key_to_decrypt_keys)
@@ -76,6 +76,6 @@ while message != 'stop':
 
         print('text decriptat: ', aux2.decrypt(text_primit))
 
-    message = input(" -> ")  # again take input
-
-client_socket.close()  # close the connection
+    message = input(" -> ") 
+    
+client_socket.close() 
